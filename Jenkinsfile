@@ -7,7 +7,7 @@ pipeline {
         DOCKER_HUB_REPO = 'royjith/cube'      // Docker Hub repository
         DOCKER_HUB_CREDENTIALS_ID = 'dockerhub' // Docker Hub credentials ID
         KUBE_CONFIG = '/tmp/kubeconfig'       // Path to the kubeconfig file
-        DEPLOYMENT_NAME = 'pipe'
+        DEPLOYMENT_NAME = 'pipe3'
         NAMESPACE = 'default'                  // Kubernetes namespace to deploy to
     }
 

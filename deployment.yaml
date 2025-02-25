@@ -7,15 +7,15 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pipe3
+      app: pipe4
   template:
     metadata:
       labels:
-        app: pipe3
+        app: pipe4
     spec:
       containers:
-      - name: pipe3
-        image: royjith/cube:version-3.13
+      - name: pipe4
+        image: royjith/cube:version-3.14
         ports:
         - containerPort: 80
 
@@ -31,4 +31,4 @@ spec:
     - port: 80
       targetPort: 80
   selector:
-    app: pipe3
+    app: pipe4

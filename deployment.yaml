@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pipe3
-        image: royjith/cube:version-3.03
+        image: royjith/cube:version-3.13
         ports:
         - containerPort: 80
 

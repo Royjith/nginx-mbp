@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pipe3
+  name: pipe
   namespace: test
 spec:
   replicas: 2

@@ -22,7 +22,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    // Use the static Docker tag "latest-v3.03"
+                    // Use the static Docker tag "latest-v3.23"
                     def tag = "${DOCKER_TAG}"
                     echo "Building Docker image with tag: ${tag}..."
 

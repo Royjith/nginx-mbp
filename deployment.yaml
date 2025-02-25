@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipe
+  namespace: stage
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pipe
+  template:
+    metadata:
+      labels:
+        app: pipe
+    spec:
+      containers:
+      - name: pipe
+        image: royjith/cube:version-3.1
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: stage
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: pipe

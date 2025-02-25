@@ -1,1 +1,1 @@
-# nginx-mbp
+# nginx-image

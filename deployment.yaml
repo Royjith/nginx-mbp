@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pipe4
+  name: pipe5
   namespace: test
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pipe4
+      app: pipe5
   template:
     metadata:
       labels:
-        app: pipe4
+        app: pipe5
     spec:
       containers:
-      - name: pipe4
-        image: royjith/cube:version-3.18
+      - name: pipe5
+        image: royjith/cube:version-3.19
         ports:
         - containerPort: 80
 
@@ -31,4 +31,4 @@ spec:
     - port: 80
       targetPort: 80
   selector:
-    app: pipe4
+    app: pipe5

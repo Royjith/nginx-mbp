@@ -108,6 +108,7 @@ pipeline {
                             def deploymentFile = 'deployment.yaml'  // Adjust path if necessary
 
                             // Verify if the deployment.yaml exists in the workspace
+                            sh "ls -ltr"
                             sh "ls -al ${deploymentFile}"
                             sh "cat ${deploymentFile}"
 

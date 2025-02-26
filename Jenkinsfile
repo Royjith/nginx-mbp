@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'my-app'               // Docker image name
-        DOCKER_TAG = 'version-3.16'             // Docker tag
+        DOCKER_TAG = 'version-3.17'             // Docker tag
         DOCKER_HUB_REPO = 'royjith/cube'      // Docker Hub repository
         DOCKER_HUB_CREDENTIALS_ID = 'dockerhub' // Docker Hub credentials ID
         KUBE_CONFIG = '/tmp/kubeconfig'       // Path to the kubeconfig file
@@ -121,7 +121,7 @@ pipeline {
                             echo 'Applying the updated deployment.yaml to the Kubernetes cluster...'
                             sh """
                                 export KUBECONFIG=$KUBECONFIG_FILE
-                                kubectl apply -f ${deploymentFile} --namespace=test
+                                kubectl apply -f ${deploymentFile} --namespace=${NAMESPACE}
                             """
                         }
                     } catch (Exception e) {

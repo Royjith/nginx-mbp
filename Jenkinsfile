@@ -15,7 +15,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out code from Git...'
-                git branch: 'main', url: 'https://github.com/Royjith/nginx-mbp.git'
+                git branch: 'test', url: 'https://github.com/Royjith/nginx-mbp.git'
             }
         }
 

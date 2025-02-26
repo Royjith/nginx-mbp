@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pipe4
-        image: royjith/cube:version-3.16
+        image: royjith/cube:version-3.17
         ports:
         - containerPort: 80
 

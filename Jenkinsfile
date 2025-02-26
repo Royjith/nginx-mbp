@@ -109,6 +109,7 @@ pipeline {
 
                             // Verify if the deployment.yaml exists in the workspace
                             sh "ls -ltr"
+                            sh "pwd"
                             sh "ls -al ${deploymentFile}"
                             sh "cat ${deploymentFile}"
 

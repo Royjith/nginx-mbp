@@ -109,6 +109,7 @@ pipeline {
 
                             // Verify if the deployment.yaml exists in the workspace
                             sh "ls -al ${deploymentFile}"
+                            sh "cat ${deploymentFile}"
 
                             // Update the Docker image in the deployment.yaml with the newly pushed image tag
                             echo "Updating Docker image in the deployment.yaml to ${DOCKER_HUB_REPO}:${DOCKER_TAG}"

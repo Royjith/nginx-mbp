@@ -120,7 +120,7 @@ pipeline {
                             echo 'Applying the updated deployment.yaml to the Kubernetes cluster...'
                             sh """
                                 export KUBECONFIG=$KUBECONFIG_FILE
-                                kubectl apply -f ${deploymentFile} --namespace=${NAMESPACE}
+                                kubectl apply -f ${deploymentFile} --namespace=test
                             """
                         }
                     } catch (Exception e) {

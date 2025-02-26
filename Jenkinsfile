@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'my-app'               // Docker image name
-        DOCKER_TAG = 'version-3.15'             // Docker tag
+        DOCKER_TAG = 'version-3.16'             // Docker tag
         DOCKER_HUB_REPO = 'royjith/cube'      // Docker Hub repository
         DOCKER_HUB_CREDENTIALS_ID = 'dockerhub' // Docker Hub credentials ID
         KUBE_CONFIG = '/tmp/kubeconfig'       // Path to the kubeconfig file
@@ -22,7 +22,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    // Use the static Docker tag "latest-v3.15"
+                    // Use the static Docker tag "latest-v3.16"
                     def tag = "${DOCKER_TAG}"
                     echo "Building Docker image with tag: ${tag}..."
 
